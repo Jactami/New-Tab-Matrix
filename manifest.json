@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "New Tab Matrix Theme",
+	"author": "Jactami",
+    "description": "\"Unfortunately, no one can be told what the Matrix is. You have to see it for yourself.\" - Morpheus",
+    "version": "1.0",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "icons": {
+        "32": "icons/icon32.png",
+        "192": "icons/icon192.png",
+        "512": "icons/icon512.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/icon32.png"
+    }
+}

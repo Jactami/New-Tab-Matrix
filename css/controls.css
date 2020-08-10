@@ -1,0 +1,125 @@
+.controls {
+    opacity: 0.7;
+    display: none;
+}
+
+/* Toggle switches */
+.blue {
+    top: 20px;
+}
+
+.red {
+    top: 60px;
+}
+
+.switch {
+    position: fixed;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+    left: 10px;
+}
+
+.switch input {
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.toggleSlider::before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.blue input:checked+.toggleSlider {
+    background-color: #0a6fc2;
+}
+
+.red input:checked+.toggleSlider {
+    background-color: #cc0000;
+}
+
+input:checked+.toggleSlider:before {
+    transform: translateX(20px);
+}
+
+.toggleSlider.round {
+    border-radius: 25px;
+}
+
+.toggleSlider.round::before {
+    border-radius: 50%;
+}
+
+.explanation {
+    position: fixed;
+    margin: 0;
+    left: 60px;
+    font-size: 22px;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* volume slider */
+.volumeContainer {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: url("../img/volume.png") no-repeat;
+    background-size: 40px 40px;
+    background-position: center bottom;
+}
+
+.volumeContainer:hover {
+    height: 250px;
+}
+
+.volumeContainer:hover .volumeSlider {
+    width: 150px;
+}
+
+.volumeContainer:hover .volumeSlider::-webkit-slider-thumb {
+    width: 8px;
+}
+
+.volumeSlider {
+    position: absolute;
+    bottom: 50px;
+    left: 19px;
+    margin: 0;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #ccc;
+    outline: none;
+    width: 0;
+    transition: width 0.4s;
+    transform-origin: 0 0;
+    transform: rotateZ(-90deg);
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 17px;
+    background: #ccc;
+    cursor: pointer;
+}
